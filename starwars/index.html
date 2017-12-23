@@ -10,22 +10,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-<div class="container">
+<div class="container" id="main-container" style="opacity: 0">
     <header>
         <nav class="top-navigation wrapper">
-            <a href="#" class="back">Back</a>
-            <a href="index.html" class="logo"></a>
+            <a href="#" class="back" id="back-link">Back</a>
+            <a href="index.html" class="logo" id="logo-link"></a>
         </nav>
 
         <section class="info">
-            <img class="avatar avatar-big" src="assets/avatars/wilhuftarkin.png"/>
-            <h1>Wilhuf Tarkin</h1>
-            <h2>Grand Moff</h2>
+            <div class="avatar">
+                <img class="avatar avatar-big" src="assets/avatars/wilhuftarkin.png" id="person-avatar"/>
+            </div>
+            <h1 id="person-name">Wilhuf Tarkin</h1>
+            <h2 id="person-post">Grand Moff</h2>
         </section>
 
-        <nav class="arrow-navigation">
+        <nav class="arrow-navigation" id="arrows-links">
             <div class="wrapper">
-                <a href="#" class="arrow left-arrow">
+                <a href="#" class="arrow left-arrow" id="left-arrow">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 65 65" style="enable-background:new 0 0 65 65;" xml:space="preserve">
                         <style type="text/css">
@@ -45,7 +47,7 @@
                         </g>
                         </svg>
                 </a>
-                <a href="#" class="arrow right-arrow">
+                <a href="#" class="arrow right-arrow" id="right-arrow">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                              viewBox="0 0 65 65" style="enable-background:new 0 0 65 65;" xml:space="preserve">
                         <style type="text/css">
@@ -69,8 +71,8 @@
         </nav>
     </header>
     <section class="wrapper">
-        <ul class="children">
-            <li>
+        <ul class="children" id="children-list">
+            <li id="child-template" data-id="">
                 <a href="#">
                     <div class="avatar">
                         <span class="badge">10</span>
@@ -82,46 +84,13 @@
                     </div>
                 </a>
             </li>
-
-            <li>
-                <a href="#">
-                    <div class="avatar">
-                        <!--<span class="badge">10</span>-->
-                        <img class="avatar avatar-small" src="assets/avatars/olsonkrennic.png"/>
-                    </div>
-                    <div class="info">
-                        <h3>Olson Krennic</h3>
-                        <p class="rank">Commander</p>
-                    </div>
-                </a>
-            </li>
-
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<div class="avatar">-->
-                        <!--<img class="avatar avatar-small" src="assets/avatars/allinprohq.png"/>-->
-                    <!--</div>-->
-                    <!--<div class="info">-->
-                        <!--<h3>Allin Prohq</h3>-->
-                        <!--<p class="rank">Ensign</p>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
-
-            <!--<li>-->
-                <!--<a href="#">-->
-                    <!--<div class="avatar">-->
-                        <!--<img class="avatar avatar-small" src="assets/avatars/jahbatut.png"/>-->
-                    <!--</div>-->
-                    <!--<div class="info">-->
-                        <!--<h3>Jah Batut</h3>-->
-                        <!--<p class="rank">Admiral</p>-->
-                    <!--</div>-->
-                <!--</a>-->
-            <!--</li>-->
         </ul>
         <div style="clear:both"></div>
     </section>
+
+    <script lang="javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script lang="javascript" src="js/data.js"></script>
+    <script lang="javascript" src="js/main.js"></script>
 </div>
 </body>
 </html>

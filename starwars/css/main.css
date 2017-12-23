@@ -4,13 +4,12 @@
     768px+: tablets
     992+px: desktops
  */
-/* @TODO: BACK BUTTON FONT SIZE */
+
 body {
-    /* @TODO: Background goes black or repeat?*/
-    background: url('../assets/background/stars.png') top left repeat, url('../assets/background/bg.png') no-repeat top center black;
+    background: url('../assets/background/stars.png') top left repeat, url('../assets/background/bg.png') repeat top center black;
     color: white;
     font-size: 18px;
-    font-family: 'Open Sans', sans-serif; /* @TODO: Google fonts? */
+    font-family: 'Open Sans', sans-serif;
     padding-bottom: 85px;
     min-width: 300px;
 }
@@ -26,6 +25,7 @@ body {
     body {
         font-size: 11px;
         padding-bottom: 40px;
+        background: black;
     }
 
 }
@@ -41,7 +41,7 @@ a, a:focus, a:visited, a:active {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    /*background: rgba(255, 255, 255, 0.2);*/
+    backface-visibility: hidden;
 }
 
 .wrapper {
@@ -89,7 +89,7 @@ h2 {
 
 img.avatar {
     border-radius: 50%;
-    border: 2px solid #fff;
+    vertical-align: middle;
 }
 
 img.avatar.avatar-small {
@@ -145,7 +145,7 @@ header {
 @media (max-width: 767px) {
     header {
         margin-top: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 46px;
     }
 
 }
@@ -230,12 +230,18 @@ header .info {
 }
 
 header .info h1 {
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 header .info h2 {
     margin-top: 12px;
     letter-spacing: 2px;
+}
+
+@media (max-width: 991px) {
+    header .info h1 {
+        margin-top: 25px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -248,6 +254,21 @@ header .info h2 {
     }
 }
 
+header .info div.avatar{
+    /*border: 2px solid #fff;*/
+    box-shadow: 0 0 0 2px #fff; /* ios safari fix */
+    border-radius: 50%;
+    display: inline-block;
+    width: 217px;
+    height: 217px;
+}
+
+@media (max-width: 767px) {
+    header .info div.avatar{
+        height: 125px;
+        width: 125px;
+    }
+}
 .arrow-navigation {
     background: url('../assets/svg/circle.svg') bottom no-repeat;
     background-size: 1755px; /* @TODO: size??? */ /* @TODO: IE */
@@ -281,7 +302,7 @@ header .info h2 {
 
 @media (max-width: 991px) {
     .arrow-navigation .arrow {
-        display: none;
+        display: none !important;
     }
 
 }
@@ -323,6 +344,12 @@ header .info h2 {
 
 }
 
+@media (max-width: 767px) {
+    ul.children{
+        display: table;
+    }
+}
+
 ul.children li {
     display: block;
     float: left;
@@ -361,28 +388,48 @@ ul.children li > a {
 }
 
 ul.children li:not(:last-child) {
-    margin-bottom: 78px;
+    margin-bottom: 82px;
 }
 
 @media (max-width: 991px) {
 
     ul.children li:not(:last-child) {
-        margin-bottom: 47px;
+        margin-bottom: 51px;
     }
 }
 
 @media (max-width: 767px) {
 
     ul.children li:not(:last-child) {
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 }
 
 ul.children div.avatar {
     float: left;
     position: relative;
-    border: 2px solid #fff;
+    /*border: 2px solid #fff;*/
+    box-shadow: 0 0 0 2px #fff;
     border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+
+
+@media (max-width: 991px) {
+
+    ul.children div.avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    ul.children div.avatar  {
+        width: 56px;
+        height: 56px;
+    }
 }
 
 ul.children div.avatar span.badge {
@@ -490,6 +537,7 @@ ul.children p.rank {
 
     ul.children p.rank {
         font-size: 15px;
+        margin-top: 13px;
     }
 }
 
