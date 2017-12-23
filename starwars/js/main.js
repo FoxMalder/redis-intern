@@ -97,12 +97,34 @@ $(document).ready(function () {
     var renderNode = function (node) {
         var clone = undefined;
         if (!first_time && currentNode !== node) {
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+                $("body").animate({scrollTop: 1}, 300);
+            }
+            else {
+                $("html, body").animate({scrollTop: 0}, 300);
+            }
+
             clone = $mainContainer.clone(true, true);
 
+            var tmp = $mainContainer;
+            $mainContainer = clone;
+            clone = tmp;
+
             clone.removeAttr('id');
-            clone.css('opacity', 1).css('position', 'absolute').css('top', 0).css('left', 0).css('right', 0).css('z-index', 999);
-            clone.prependTo('body');
-            $mainContainer.css('opacity', 0);
+            clone.css({'opacity': 1, 'position': 'absolute', 'top': 0, 'left': 0, 'right': 0, 'z-index': 999});
+            clone.off();
+
+            $mainContainer.css({'opacity': 0, 'position': 'absolute', 'top': 0, 'left': 0, 'right': 0, 'z-index': 0});
+            $mainContainer.appendTo('body');
+
+            // Переприсваиваем все указатели
+            $backLink = $mainContainer.find('#back-link');
+            $logoLink = $mainContainer.find('#logo-link');
+            $personImage = $mainContainer.find('#person-avatar');
+            $personName = $mainContainer.find('#person-name');
+            $personPost = $mainContainer.find('#person-post');
+            $arrowNavigation = $mainContainer.find('#arrows-links').find('a');
+            $childrenList = $mainContainer.find('#children-list');
         }
 
 
@@ -148,6 +170,7 @@ $(document).ready(function () {
         if (!first_time && currentNode !== node) {
             clone.stop().fadeTo(700, 0);
             $mainContainer.stop().fadeTo(700, 1, function () {
+                $mainContainer.removeAttr('style');
                 clone.remove();
             });
 

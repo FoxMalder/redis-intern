@@ -10,16 +10,16 @@ body {
     color: white;
     font-size: 18px;
     font-family: 'Open Sans', sans-serif;
-    padding-bottom: 85px;
+    /*padding-bottom: 85px;*/
     min-width: 300px;
 }
 
-@media (max-width: 991px) {
-    body {
-        padding-bottom: 145px;
-    }
+/*@media (max-width: 991px) {*/
+    /*body {*/
+        /*padding-bottom: 145px;*/
+    /*}*!*/
 
-}
+/*}*/
 
 @media (max-width: 747px) {
     body {
@@ -42,6 +42,14 @@ a, a:focus, a:visited, a:active {
     margin-left: auto;
     margin-right: auto;
     backface-visibility: hidden;
+    margin-bottom: 85px;
+}
+
+@media (max-width: 991px) {
+    .container {
+        margin-bottom: 145px;
+    }
+
 }
 
 .wrapper {
@@ -172,8 +180,8 @@ header .top-navigation a.logo {
 
 @media (max-width: 767px) {
     header .top-navigation a.logo {
-        height: 28px;
-        width: 62px;
+        height: 27px;
+        width: 60px;
     }
 }
 
@@ -309,6 +317,12 @@ header .info div.avatar{
 
 .arrow-navigation .arrow .st1 {
     transition: fill 0.2s linear;
+    fill: #fff;
+}
+
+.arrow-navigation .arrow .st0{
+    stroke: #808080;
+    stroke-miterlimit: 10;
 }
 
 .arrow-navigation .arrow:hover .st1 {
