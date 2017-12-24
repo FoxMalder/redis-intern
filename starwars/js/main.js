@@ -97,11 +97,12 @@ $(document).ready(function () {
     var renderNode = function (node) {
         var clone = undefined;
         if (!first_time && currentNode !== node) {
-            if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
                 $("body").animate({scrollTop: 1}, 300);
             }
             else {
                 $("html, body").animate({scrollTop: 0}, 300);
+                console.log("SCROLL");
             }
 
             clone = $mainContainer.clone(true, true);

@@ -15,9 +15,9 @@ body {
 }
 
 /*@media (max-width: 991px) {*/
-    /*body {*/
-        /*padding-bottom: 145px;*/
-    /*}*!*/
+/*body {*/
+/*padding-bottom: 145px;*/
+/*}*!*/
 
 /*}*/
 
@@ -51,6 +51,14 @@ a, a:focus, a:visited, a:active {
     }
 
 }
+
+@media (max-width: 767px) {
+    .container {
+        margin-bottom: 0;
+    }
+
+}
+
 
 .wrapper {
     max-width: 940px;
@@ -153,7 +161,7 @@ header {
 @media (max-width: 767px) {
     header {
         margin-top: 40px;
-        margin-bottom: 46px;
+        margin-bottom: 41px;
     }
 
 }
@@ -171,7 +179,7 @@ header .top-navigation {
 }
 
 header .top-navigation a.logo {
-    background-image: url('../assets/svg/sw_logo.svg');
+    background: url('../assets/svg/sw_logo.svg') no-repeat;
     width: 109px;
     height: 49px;
     display: block;
@@ -180,8 +188,8 @@ header .top-navigation a.logo {
 
 @media (max-width: 767px) {
     header .top-navigation a.logo {
-        height: 27px;
-        width: 60px;
+        height: 31px;
+        width: 64px;
     }
 }
 
@@ -254,7 +262,7 @@ header .info h2 {
 
 @media (max-width: 767px) {
     header .info h1 {
-        margin-top: 18px;
+        margin-top: 24px;
     }
 
     header .info h2 {
@@ -262,7 +270,7 @@ header .info h2 {
     }
 }
 
-header .info div.avatar{
+header .info div.avatar {
     /*border: 2px solid #fff;*/
     box-shadow: 0 0 0 2px #fff; /* ios safari fix */
     border-radius: 50%;
@@ -272,14 +280,15 @@ header .info div.avatar{
 }
 
 @media (max-width: 767px) {
-    header .info div.avatar{
+    header .info div.avatar {
         height: 125px;
         width: 125px;
     }
 }
+
 .arrow-navigation {
     background: url('../assets/svg/circle.svg') bottom no-repeat;
-    background-size: 1755px; /* @TODO: size??? */ /* @TODO: IE */
+    background-size: 1755px;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -320,7 +329,7 @@ header .info div.avatar{
     fill: #fff;
 }
 
-.arrow-navigation .arrow .st0{
+.arrow-navigation .arrow .st0 {
     stroke: #808080;
     stroke-miterlimit: 10;
 }
@@ -359,7 +368,7 @@ header .info div.avatar{
 }
 
 @media (max-width: 767px) {
-    ul.children{
+    ul.children {
         display: table;
     }
 }
@@ -429,7 +438,6 @@ ul.children div.avatar {
     height: 110px;
 }
 
-
 @media (max-width: 991px) {
 
     ul.children div.avatar {
@@ -440,7 +448,7 @@ ul.children div.avatar {
 
 @media (max-width: 767px) {
 
-    ul.children div.avatar  {
+    ul.children div.avatar {
         width: 56px;
         height: 56px;
     }
@@ -505,7 +513,7 @@ ul.children div.info {
 
     ul.children div.info {
         margin-left: 23px;
-        padding-top: 12px;
+        padding-top: 10px;
     }
 }
 
@@ -521,8 +529,8 @@ ul.children h3 {
     transition: color 0.2s linear;
 }
 
-@media (min-width: 992px){
-    ul.children h3{
+@media (min-width: 992px) {
+    ul.children h3 {
         white-space: nowrap;
     }
 }
