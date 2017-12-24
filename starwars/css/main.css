@@ -403,6 +403,14 @@ ul.children li > a {
     color: white;
 }
 
+@media (max-width: 767px) {
+    ul.children li > a{
+        display: block;
+        white-space: nowrap;
+    }
+
+}
+
 @media (min-width: 992px) {
 
     ul.children li:nth-child(even) {
@@ -451,6 +459,9 @@ ul.children div.avatar {
     ul.children div.avatar {
         width: 56px;
         height: 56px;
+        float: none;
+        display: inline-block;
+        vertical-align: top;
     }
 }
 
@@ -506,6 +517,9 @@ ul.children div.info {
     ul.children div.info {
         margin-left: 30px;
         padding-top: 15px;
+        float: none;
+        display: inline-block;
+        vertical-align: top;
     }
 }
 
